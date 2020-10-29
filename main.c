@@ -11,11 +11,18 @@ int main(int argc, char *argv[]) {
 
 	printf("input %i scores\n", SIZE);
 	
-	for(i=0;i<SIZE;i++)
-		scanf("%d", &grade[i]);
+	sum = 0;
 	
+	for(i=0;i<SIZE;i++){
+	
+		scanf("%d", &grade[i]);
+		sum += grade[i];
+}
 	for(i=0;i<SIZE;i++)
 	    printf("grade[%d] =%d\n", i, grade[i]);
+	
+	average = sum/SIZE;
+	printf("average : %i\n", average);
 	
 	return 0;
 }
